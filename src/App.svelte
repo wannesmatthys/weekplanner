@@ -1,9 +1,26 @@
 <script lang="ts">
-  import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+  import { Router, Route, Link } from "svelte-routing";
+  import logo from "./assets/svelte.png";
+  import Counter from "./lib/Counter.svelte";
+
+  import Login from "./routes/auth/login.svelte";
+  import Home from "./routes/home/home.svelte";
+
+  export let url = "";
 </script>
 
-<main>
+<Router {url}>
+  <nav>
+    <Link to="/">Week planner</Link>
+    <Link to="login">Login</Link>
+  </nav>
+  <div>
+    <Route path="/" component={Home} />
+    <Route path="login" component={Login} />
+  </div>
+</Router>
+
+<!-- <main>
   <img src={logo} alt="Svelte Logo" />
   <h1>Hello Typescript!</h1>
 
@@ -22,12 +39,11 @@
   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
     Button
   </button>
-</main>
-
+</main> -->
 <style>
   :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
   main {
