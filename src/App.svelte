@@ -8,9 +8,15 @@
 </script>
 
 <Router {url}>
-  <nav>
-    <Link to="/">Week planner</Link>
-    <Link to="login">Login</Link>
+  <nav
+    class="text-right py-4 px-4 text-lg bg-gradient-to-br from-green-500 to-green-600 text-white font-bold flex justify-between"
+  >
+    <div class="text-xl">
+      <Link to="/">Week planner</Link>
+    </div>
+    <div class="text-right">
+      <Link to="login">Login</Link>
+    </div>
   </nav>
   <div>
     <Route path="/" component={Home} />
