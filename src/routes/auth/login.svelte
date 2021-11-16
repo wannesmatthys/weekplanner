@@ -26,8 +26,8 @@
 
       <Button
         text="Join game"
-        gradientStart="blue-500"
-        gradientEnd="indigo-500"
+        gradientStart="green-500"
+        gradientEnd="green-600"
         classes="w-full mt-3 mb-1"
       />
     </form>
