@@ -1,5 +1,3 @@
-
-  
 <script lang="ts">
     import Button from './Base/Button.svelte';
 	import type { IAuthResponse } from 'src/interfaces/interfaces';

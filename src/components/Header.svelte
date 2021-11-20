@@ -1,15 +1,17 @@
 <script lang="ts">
-  import { Router, Route, Link } from "svelte-routing";
+import { Router, Route, Link } from "svelte-navigator";
 
-  import Login from "../routes/auth/Login.svelte";
-  import Home from "../routes/home/Home.svelte";
+import Login from "../routes/auth/Login.svelte";
+import Home from "../routes/home/Home.svelte";
 
-  import Avatar from "../assets/svelte.png";
+import Avatar from "../assets/svelte.png";
 
-  export let url = "";
+import userStore from "../stores/user.store";
+import Logout from "../routes/auth/Logout.svelte";
+
 </script>
 
-<Router {url}>
+<Router basepath="/" primary={false}>
   <nav
     class="text-right py-3 px-4 text-lg bg-gradient-to-br from-green-500 to-green-600 text-white font-bold flex justify-between items-center"
   >
@@ -19,7 +21,12 @@
 
     <div class="flex items-center">
       <div class="block px-4">
-        <Link to="login">Login</Link>
+        {#if $userStore.authenticated}
+          <Link to="logout">Logout</Link>
+          {:else}
+            <Link to="login">Login</Link>
+        {/if}
+        
       </div>
 
       <button class=" ">
@@ -36,5 +43,6 @@
   <div>
     <Route path="/" component={Home} />
     <Route path="login" component={Login} />
+    <Route path="logout" component={Logout} />
   </div>
 </Router>

@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /usr/local/bin/yarn add axios
+  /usr/bin/node /usr/local/bin/yarn
 
 PATH: 
-  /home/wannes/.local/bin:/home/wannes/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin
 
 Yarn version: 
   1.22.17
@@ -14,7 +14,12 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/wannes/Documents/School/Trending Topics/frontend/node_modules/@types/gapi.auth2/LICENSE'
+  SyntaxError: /home/wannes/Documents/School/Trending Topics/frontend/package.json: Unexpected token } in JSON at position 850
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -47,7 +52,8 @@ npm manifest:
       "@types/gapi": "^0.0.41",
       "@types/gapi.auth2": "^0.0.55",
       "async-script-loader": "^0.0.1",
-      "svelte-routing": "^1.6.0"
+      "axios": "^0.24.0",
+      "svelte-navigator": "^3.1.5",
     }
   }
 
@@ -234,6 +240,13 @@ Lockfile:
       normalize-range "^0.1.2"
       picocolors "^1.0.0"
       postcss-value-parser "^4.1.0"
+  
+  axios@^0.24.0:
+    version "0.24.0"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+    integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+    dependencies:
+      follow-redirects "^1.14.4"
   
   balanced-match@^1.0.0:
     version "1.0.2"
@@ -773,6 +786,11 @@ Lockfile:
     integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
     dependencies:
       to-regex-range "^5.0.1"
+  
+  follow-redirects@^1.14.4:
+    version "1.14.5"
+    resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
+    integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
   
   fraction.js@^4.1.1:
     version "4.1.2"
@@ -1676,6 +1694,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.7.tgz#7fa8261c7b225d9409f0a86f3b9ea5c3ca6f6607"
     integrity sha512-pDrzgcWSoMaK6AJkBWkmgIsecW0GChxYZSZieIYfCP0v2oPyx2CYU/zm7TBIcjLVUPP714WxmViE9Thht4etog==
   
+  svelte-navigator@^3.1.5:
+    version "3.1.5"
+    resolved "https://registry.yarnpkg.com/svelte-navigator/-/svelte-navigator-3.1.5.tgz#f79d78b2c2c5ad907d8b1d3748d3fbe12c32195c"
+    integrity sha512-CGTaexasSLpUaTSN2AlYqii0JeisIgg7uZbm8XCLKlpM9Qv3IltlJ7Nvh90Xw9ND97KqtGOjNJ3LNwMN1ABV0w==
+    dependencies:
+      svelte2tsx "^0.1.151"
+  
   svelte-preprocess@^4.0.0, svelte-preprocess@^4.9.8:
     version "4.9.8"
     resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.9.8.tgz#fd40afebfb352f469beab289667485ebf0d811da"
@@ -1695,7 +1720,7 @@ Lockfile:
     dependencies:
       svelte2tsx "^0.1.157"
   
-  svelte2tsx@^0.1.157:
+  svelte2tsx@^0.1.151, svelte2tsx@^0.1.157:
     version "0.1.193"
     resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.193.tgz#16fe594898ef455e4f715ac317d219c9c757656b"
     integrity sha512-vzy4YQNYDnoqp2iZPnJy7kpPAY6y121L0HKrSBjU/IWW7DQ6T7RMJed2VVHFmVYm0zAGYMDl9urPc6R4DDUyhg==

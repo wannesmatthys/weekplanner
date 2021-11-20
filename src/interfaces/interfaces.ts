@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
     id: number,
     name: string,
     email: string,
@@ -8,6 +8,6 @@ export interface User {
 }
 
 export interface IAuthResponse {
-    user: User,
+    user: IUser,
     accessToken: string
 }
