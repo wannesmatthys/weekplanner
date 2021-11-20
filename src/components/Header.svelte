@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Router, Route, Link } from "svelte-routing";
 
-  import Login from "../routes/auth/login.svelte";
-  import Home from "../routes/home/home.svelte";
+  import Login from "../routes/auth/Login.svelte";
+  import Home from "../routes/home/Home.svelte";
 
   import Avatar from "../assets/svelte.png";
 
@@ -22,7 +22,7 @@
         <Link to="login">Login</Link>
       </div>
 
-      <button class="bg-white flex rounded-full py-2 px-3">
+      <button class=" ">
         <img
           class="rounded-full my-auto lg:w-8 lg:h-8 md:w-10 md:h-10 sm:w-12 sm:h-12"
           src={Avatar}

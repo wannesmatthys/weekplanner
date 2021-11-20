@@ -74,6 +74,18 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-2.0.1.tgz#0e8d7caa693e9b2afce5e622c0475bb0fd89c12c"
   integrity sha512-aqkICXbM1oX5FfgZd2qSSAGdyo/NRxjWCamxoyi3T8iVQnzGge19HhDYzZ6NrVOW7bhcWNSq9XexWFtMzbB24A==
 
+"@types/gapi.auth2@^0.0.55":
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/@types/gapi.auth2/-/gapi.auth2-0.0.55.tgz#88523c1b8d4866ea64ec9cbecb9ecc90b80b88aa"
+  integrity sha512-chmROsbo28jI5or0aRP8X3aBuWkq8jJHj75al/C0BhI/qum8v7XSxxQ9aLpA2ULPWgWSyh6orn9ZCaUSA4iQCA==
+  dependencies:
+    "@types/gapi" "*"
+
+"@types/gapi@*", "@types/gapi@^0.0.41":
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@types/gapi/-/gapi-0.0.41.tgz#c477ee4f0951c005869219fd10b456ae2bba437e"
+  integrity sha512-tmHO66z/f91JZCDqinj/nNvQEszsz/hBT4+MvCSKT5sDzl5Ld/oXZ8WaecCBjRLw2uWKUInUHM9MhEXWkOiNjw==
+
 "@types/node@*":
   version "16.11.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.7.tgz#36820945061326978c42a01e56b61cd223dfdc42"
@@ -147,6 +159,13 @@ arg@^5.0.1:
   resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.1.tgz#eb0c9a8f77786cad2af8ff2b862899842d7b6adb"
   integrity sha512-e0hDa9H2Z9AwFkk2qDlwhoMYE4eToKarchkQHovNdLTCYMHZHeRjI71crOh+dio4K6u1IcwubQqo79Ga4CyAQA==
 
+async-script-loader@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/async-script-loader/-/async-script-loader-0.0.1.tgz#69620597aadce21569f08c6b90cc63aa6e3b5deb"
+  integrity sha512-z8S6g70nj5x9ZZFDzK9ozrAUJanbI3iZ0ZLdhabl5um35b23hxrVGIGUhbnmIHzomS8CElN/bFtN4lcVTVrdSg==
+  dependencies:
+    uuid "^3.2.1"
+
 autoprefixer@^10.3.7:
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.0.tgz#c3577eb32a1079a440ec253e404eaf1eb21388c8"
@@ -158,6 +177,13 @@ autoprefixer@^10.3.7:
     normalize-range "^0.1.2"
     picocolors "^1.0.0"
     postcss-value-parser "^4.1.0"
+
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -697,6 +723,11 @@ fill-range@^7.0.1:
   integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
   dependencies:
     to-regex-range "^5.0.1"
+
+follow-redirects@^1.14.4:
+  version "1.14.5"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
+  integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
 
 fraction.js@^4.1.1:
   version "4.1.2"
@@ -1726,6 +1757,11 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+uuid@^3.2.1:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
+  integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 vendors@^1.0.3:
   version "1.0.4"
