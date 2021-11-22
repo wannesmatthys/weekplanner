@@ -1,14 +1,13 @@
 <script lang="ts">
-import { Router, Route, Link } from "svelte-navigator";
+  import { Router, Route, Link } from "svelte-navigator";
 
-import Login from "../routes/auth/Login.svelte";
-import Home from "../routes/home/Home.svelte";
+  import Login from "../routes/auth/Login.svelte";
+  import Home from "../routes/home/Home.svelte";
 
-import Avatar from "../assets/svelte.png";
+  import Avatar from "../assets/svelte.png";
 
-import userStore from "../stores/user.store";
-import Logout from "../routes/auth/Logout.svelte";
-
+  import userStore from "../stores/user.store";
+  import Logout from "../routes/auth/Logout.svelte";
 </script>
 
 <Router basepath="/" primary={false}>
@@ -23,13 +22,12 @@ import Logout from "../routes/auth/Logout.svelte";
       <div class="block px-4">
         {#if $userStore.authenticated}
           <Link to="logout">Logout</Link>
-          {:else}
-            <Link to="login">Login</Link>
+        {:else}
+          <Link to="login">Login</Link>
         {/if}
-        
       </div>
 
-      <button class=" ">
+      <button class="bg-white flex rounded-full py-2 px-3">
         <img
           class="rounded-full my-auto lg:w-8 lg:h-8 md:w-10 md:h-10 sm:w-12 sm:h-12"
           src={Avatar}
