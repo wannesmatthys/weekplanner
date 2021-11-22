@@ -1,3 +1,4 @@
+import netlify from '@sveltejs/adapter-netlify';
 import sveltePreprocess from "svelte-preprocess";
 
 export default {
@@ -8,4 +9,7 @@ export default {
       postcss: true,
     }),
   ],
+  kit: {
+	adapter: netlify(),
+  }
 };

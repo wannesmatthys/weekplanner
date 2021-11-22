@@ -15,7 +15,7 @@
 			
 			try {
 				const code = await auth2.grantOfflineAccess();
-				fetch(`http://localhost:3000/auth/google?code=${code.code}`).then(res => res.json()).then(onSuccess).catch(onFailure);
+				fetch(`https://weekplanner-backend.herokuapp.com//auth/google?code=${code.code}`).then(res => res.json()).then(onSuccess).catch(onFailure);
 			} catch (err: unknown) {
 				onFailure(err);
 			}

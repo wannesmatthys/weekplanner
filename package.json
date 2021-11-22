@@ -22,7 +22,8 @@
     "tailwindcss": "^2.2.16",
     "tslib": "^2.2.0",
     "typescript": "^4.3.2",
-    "vite": "^2.6.4"
+    "vite": "^2.6.4",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.33"
   },
   "dependencies": {
     "@fullcalendar/core": "^5.10.1",
