@@ -8,6 +8,7 @@
 
   import userStore from "../stores/user.store";
   import Logout from "../routes/auth/Logout.svelte";
+  
 </script>
 
 <Router basepath="/" primary={false}>
@@ -27,15 +28,17 @@
         {/if}
       </div>
 
-      <button class="bg-white flex rounded-full py-2 px-3">
-        <img
-          class="rounded-full my-auto lg:w-8 lg:h-8 md:w-10 md:h-10 sm:w-12 sm:h-12"
-          src={Avatar}
-          alt="User Icon"
-          title="User Icon"
-        />
-        <p class="p-1 my-auto text-green-600">Username</p>
-      </button>
+      {#if $userStore.authenticated}
+        <button class="bg-white flex rounded-full py-2 px-3">
+          <img
+            class="rounded-full my-auto lg:w-8 lg:h-8 md:w-10 md:h-10 sm:w-12 sm:h-12"
+            src={Avatar}
+            alt="User Icon"
+            title="User Icon"
+          />
+          <p class="p-1 my-auto text-green-600">{$userStore.user.name}</p>
+        </button>
+      {/if}
     </div>
   </nav>
   <div>
